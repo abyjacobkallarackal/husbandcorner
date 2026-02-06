@@ -1,5 +1,5 @@
 const text =
-  "Joash, will you always be my today, tomorrow, and forever?";
+  "Joash Achacha, will you always be my today, tomorrow, and forever?";
 
 let i = 0;
 const speed = 60;
@@ -20,3 +20,4 @@ function sheSaidYes() {
   document.getElementById("bgMusic").play();
   alert("Forever starts now 💍🤍");
 }
+
