@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.back {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff5f8b, #ff2e63);
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(255, 46, 139, 0.4);
+  transition: all 0.3s ease;
+}
+
+.back:hover {
+  background: linear-gradient(135deg, #ff2e63, #ff1a4d);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Subtle page load animation */
+.page {
+  animation: softFade 0.8s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes softFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating hearts animation */
+.heart {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #ff5f8b;
+  transform: rotate(45deg);
+  animation: floatHeart linear infinite;
+  z-index: 0;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #ff5f8b;
+  border-radius: 50%;
+}
+
+.heart::before { top: -7.5px; left: 0; }
+.heart::after { left: 7.5px; top: 0; }
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150px) translateX(20px) rotate(45deg);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+  <h1>Happy Valentine’s Day ❤️</h1>
+
+  <img src="assets/valentine.jpeg" class="img">
+
+<p>
+You are not just someone I love.   <br>
+You are my heart, my home, my always.
+</p>
+
+
+  <h2>Abygail ❤ Joash</h2>
+
+  <a href="home.html" class="back">⬅ Back Home</a>
+</div>
+
+<!-- Floating hearts -->
+<div class="heart" style="left:10%; animation-duration:4s; animation-delay:0s;"></div>
+<div class="heart" style="left:25%; animation-duration:5s; animation-delay:1s;"></div>
+<div class="heart" style="left:40%; animation-duration:4.5s; animation-delay:0.5s;"></div>
+<div class="heart" style="left:60%; animation-duration:5.5s; animation-delay:0.8s;"></div>
+<div class="heart" style="left:75%; animation-duration:4.2s; animation-delay:0.2s;"></div>
+<div class="heart" style="left:85%; animation-duration:5s; animation-delay:1.2s;"></div>
+
+</body>
+</html>

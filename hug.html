@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hug Day 🫂</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffd6e8, #fff);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: auto;
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #e75480;
+    }
+
+    .question {
+      display: none;
+      animation: slideIn 0.6s ease;
+    }
+
+    .question.active {
+      display: block;
+    }
+
+    img.quiz-img {
+      width: 100%;
+      border-radius: 15px;
+      margin: 15px 0;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      background: #ff6f91;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff4f7b;
+    }
+
+    .feedback {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🤗 Hug Day</h1>
+
+  <!-- QUESTION 1 -->
+  <div class="question active" id="q1">
+    <p><strong>From where was this photo clicked?</strong></p>
+    <img src="assets/hug.jpeg" alt="Memory Photo" class="quiz-img">
+    <button onclick="answerQ1(false)">Munnar Trip</button>
+    <button onclick="answerQ1(false)">Booster Chai Visit</button>
+    <button onclick="answerQ1(true)">Wonderla</button>
+    <div class="feedback" id="f1"></div>
+  </div>
+
+  <!-- QUESTION 2 -->
+  <div class="question" id="q2">
+    <p><strong>What was the color of the Bible I held at our wedding?</strong></p>
+    <button onclick="answerQ2(false)">Black 🖤</button>
+    <button onclick="answerQ2(true)">Blue 💙</button>
+    <button onclick="answerQ2(false)">White ❤</button>
+    <div class="feedback" id="f2"></div>
+  </div>
+
+  <!-- QUESTION 3 -->
+  <div class="question" id="q3">
+    <p><strong>Who is always correct when we fight?</strong></p>
+    <button onclick="answerQ3()">Husband </button>
+    <button onclick="answerQ3()">Wife</button>
+    <div class="feedback" id="f3"></div>
+  </div>
+
+  <!-- QUESTION 4 -->
+  <div class="question" id="q4">
+    <p><strong>Who loves hugs the most?</strong></p>
+    <button onclick="answerQ4()">Achachan</button>
+    <button onclick="answerQ4()">Abygail</button>
+    <div class="feedback" id="f4"></div>
+  </div>
+
+  <!-- SCORE SCREEN -->
+  <div class="question" id="score">
+    <h2>🧮 Score</h2>
+    <p><strong>Score: 2 / 4</strong></p>
+    <p><strong>Result: 100% 💯</strong></p>
+    <p style="margin-top:15px;">
+      Because for us, love was never about who is right…<br>
+      it was always about staying together.<br><br>
+      <em>In love, we don’t compete — we complete.</em> 🤍
+    </p>
+    <button onclick="showFinal()">Continue 🫂</button>
+  </div>
+
+  <!-- FINAL CONTENT -->
+  <div class="question" id="final">
+    <h2>🫂</h2>
+    <p>
+      Every hug from you reminds me that I’m never alone.
+    </p>
+    <p>🤍🤍🤍</p>
+  </div>
+
+</div> <br> <br>
+<a href="home.html" class="back">⬅ Back Home</a>
+
+<script>
+  function next(currentId, nextId) {
+    document.getElementById(currentId).classList.remove('active');
+    document.getElementById(nextId).classList.add('active');
+  }
+
+  function answerQ1(correct) {
+    document.getElementById('f1').innerText =
+      correct ? "Correct 💖" : "Not that one 😌";
+    setTimeout(() => next('q1', 'q2'), 1200);
+  }
+
+  function answerQ2(correct) {
+    document.getElementById('f2').innerText =
+      correct ? "Yes! Blue 💙" : "Nope 😄";
+    setTimeout(() => next('q2', 'q3'), 1200);
+  }
+
+  function answerQ3() {
+    document.getElementById('f3').innerText =
+      "Nah 😌 God is always right 🙏";
+    setTimeout(() => next('q3', 'q4'), 1500);
+  }
+
+  function answerQ4() {
+    document.getElementById('f4').innerText =
+      "Sorry 😄 Incorrect.\nCorrect answer is: Both 🫂";
+    setTimeout(() => next('q4', 'score'), 1700);
+  }
+
+  function showFinal() {
+    next('score', 'final');
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiss Day 💋</title>
+  <link rel="stylesheet" href="css/style.css">
+<style>
+.back {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 20px;
+  background: #fff;
+  color: linear-gradient(135deg, #ff5f8b, #ff2e63);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(255, 46, 139, 0.4);
+  transition: all 0.3s ease;
+}
+.back:hover {
+  background: linear-gradient(135deg, #ff2e63, #ff1a4d);
+  transform: translateY(-3px) scale(1.05);
+}
+
+
+</style>
+</head>
+<body class="kiss-bg">
+
+<!-- BACK TO HOME -->
+<a href="home.html" class="back">⬅ Back to Home</a>
+
+
+
+
+<div class="page kiss-page">
+
+  <h1>💋 Kiss Day — Sealed With Love</h1>
+
+  <!-- QUESTION -->
+  <div class="question active" id="kissQuestion">
+    <p>Where did your wife's most memorable kiss happen? 😘</p>
+
+    <button onclick="checkAnswer(false)">Munnar Trip</button>
+    <button onclick="checkAnswer(true)">Elevator Kiss</button>
+    <button onclick="checkAnswer(false)">Vande Bharat Trip</button>
+  </div>
+
+  <!-- RESULT -->
+  <div class="question" id="kissResult">
+    <h2>Correct 💖</h2>
+    <p class="romantic-text">
+      “Every kiss is a promise without words.”
+    </p>
+
+    <button onclick="blowKiss()">💋 Click me</button>
+  </div>
+
+  <!-- KISS ANIMATION AREA -->
+  <div id="kissArea"></div>
+
+</div>
+
+<script src="js/kiss.js"></script>
+</body>
+</html>

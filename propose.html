@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Propose Day 💍</title>
+  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.back {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff5f8b, #ff2e63);
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(255, 46, 139, 0.4);
+  transition: all 0.3s ease;
+}
+.back:hover {
+  background: linear-gradient(135deg, #ff2e63, #ff1a4d);
+  transform: translateY(-3px) scale(1.05);
+}
+
+
+</style>
+</head>
+<body class="propose-bg">
+
+<!-- BACK TO HOME -->
+<a href="home.html" class="back">⬅ Back to Home</a>
+
+<div class="page propose-page">
+
+  <h1>💍 Propose Day — I Choose You</h1>
+
+ <p>AI tried to create a proposal video… and this happened😂. I found it hilarious!” 😄 </p>
+
+<video class="proposal-video" autoplay muted loop playsinline>
+  <source src="assets/propose-video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<p id="proposalText" class="typing-text">Will you be my valetine forever?</p>
+
+  <!-- ANIME / SILHOUETTE IMAGE -->
+  <img src="assets/one.JPG" class="proposal-img" alt="Proposal">
+
+
+
+  <!-- RING -->
+  <div class="ring">💍</div>
+
+  <!-- BUTTON -->
+  <button class="yes-btn" onclick="sheSaidYes()">Both said YES 😌</button>
+
+  <!-- NAMES -->
+  <div class="names">
+    <span>Abygail</span> ❤️ <span>Joash</span>
+  </div>
+
+  <!-- MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="assets/propose-music.mp3" type="audio/mpeg">
+  </audio>
+
+</div>
+
+<script src="js/propose.js"></script>
+</body>
+</html>
